@@ -13,6 +13,9 @@
 		183A0F3622DE1D6200F860F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183A0F3522DE1D6200F860F6 /* Assets.xcassets */; };
 		183A0F3922DE1D6200F860F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183A0F3722DE1D6200F860F6 /* LaunchScreen.storyboard */; };
 		183A0F4122DE22F700F860F6 /* coachella-e1524620568456.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 183A0F4022DE22F700F860F6 /* coachella-e1524620568456.jpg */; };
+		183A0F4322DE23DC00F860F6 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0F4222DE23DC00F860F6 /* AddPhotoViewController.swift */; };
+		18686C2522DE4C9700C3791F /* ccc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18686C2422DE4C9700C3791F /* ccc.jpeg */; };
+		18686C2722DE543F00C3791F /* PhotoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18686C2622DE543F00C3791F /* PhotoTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		183A0F3822DE1D6200F860F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		183A0F3A22DE1D6200F860F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183A0F4022DE22F700F860F6 /* coachella-e1524620568456.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "coachella-e1524620568456.jpg"; path = "../../../Downloads/coachella-e1524620568456.jpg"; sourceTree = "<group>"; };
+		183A0F4222DE23DC00F860F6 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		18686C2422DE4C9700C3791F /* ccc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ccc.jpeg; path = ../../../Downloads/ccc.jpeg; sourceTree = "<group>"; };
+		18686C2622DE543F00C3791F /* PhotoTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,11 @@
 		183A0F2A22DE1D5F00F860F6 /* ViewFinder */ = {
 			isa = PBXGroup;
 			children = (
+				18686C2422DE4C9700C3791F /* ccc.jpeg */,
 				183A0F2B22DE1D5F00F860F6 /* AppDelegate.swift */,
 				183A0F2F22DE1D5F00F860F6 /* Main.storyboard */,
+				18686C2622DE543F00C3791F /* PhotoTableTableViewController.swift */,
+				183A0F4222DE23DC00F860F6 /* AddPhotoViewController.swift */,
 				183A0F4022DE22F700F860F6 /* coachella-e1524620568456.jpg */,
 				183A0F3522DE1D6200F860F6 /* Assets.xcassets */,
 				183A0F3722DE1D6200F860F6 /* LaunchScreen.storyboard */,
@@ -125,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18686C2522DE4C9700C3791F /* ccc.jpeg in Resources */,
 				183A0F3922DE1D6200F860F6 /* LaunchScreen.storyboard in Resources */,
 				183A0F3622DE1D6200F860F6 /* Assets.xcassets in Resources */,
 				183A0F3122DE1D5F00F860F6 /* Main.storyboard in Resources */,
@@ -140,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				183A0F3422DE1D5F00F860F6 /* ViewFinder.xcdatamodeld in Sources */,
+				183A0F4322DE23DC00F860F6 /* AddPhotoViewController.swift in Sources */,
 				183A0F2C22DE1D5F00F860F6 /* AppDelegate.swift in Sources */,
+				18686C2722DE543F00C3791F /* PhotoTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,13 +13,13 @@
         <!--ViewFinder-->
         <scene sceneID="LT5-Ph-gWp">
             <objects>
-                <tableViewController id="IEz-k1-94U" sceneMemberID="viewController">
+                <tableViewController id="IEz-k1-94U" customClass="PhotoTableTableViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TaB-hq-Bev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zam-q8-yq2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="zam-q8-yq2">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zam-q8-yq2" id="Eic-dJ-doq">
@@ -48,7 +48,7 @@
         <!--Add New Photo-->
         <scene sceneID="ETk-Ms-gkR">
             <objects>
-                <viewController title="Add New Photo" id="rgl-TH-qI3" sceneMemberID="viewController">
+                <viewController title="Add New Photo" id="rgl-TH-qI3" customClass="AddPhotoViewController" customModule="ViewFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yJ6-fv-YqS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,10 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="cameraButton:" destination="rgl-TH-qI3" eventType="touchUpInside" id="DHC-RU-N4P"/>
+                                    <action selector="cameraButton:" destination="dQj-rU-9P5" eventType="touchUpInside" id="wwT-p3-BiD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eET-f4-KEL">
                                 <rect key="frame" x="74" y="515" width="272" height="83"/>
@@ -78,13 +82,13 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="photoLibraryButton:" destination="rgl-TH-qI3" eventType="touchUpInside" id="c3H-ru-6ba"/>
+                                    <action selector="photoLibraryButton:" destination="dQj-rU-9P5" eventType="touchUpInside" id="mS8-Ip-WxY"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coachella-e1524620568456" translatesAutoresizingMaskIntoConstraints="NO" id="bmC-be-CEN">
-                                <rect key="frame" x="20" y="119" width="374" height="298"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mj-23-PM0">
-                                <rect key="frame" x="44" y="707" width="324" height="30"/>
+                                <rect key="frame" x="44" y="706" width="324" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -102,6 +106,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="dQj-rU-9P5" eventType="touchUpInside" id="gF0-F1-CYT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkN-nE-EJu">
                                 <rect key="frame" x="71" y="615" width="264" height="81"/>
@@ -115,7 +122,14 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="albumButton:" destination="dQj-rU-9P5" eventType="touchUpInside" id="KVG-4s-zjs"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ccc" translatesAutoresizingMaskIntoConstraints="NO" id="c6J-Cw-fkg" customClass="ccc">
+                                <rect key="frame" x="44" y="118" width="324" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="MpW-Ep-tIe"/>
@@ -123,8 +137,13 @@
                     <navigationItem key="navigationItem" title="Add New Photo" id="Ovg-AF-YFE">
                         <barButtonItem key="backBarButtonItem" title="Back" id="iky-2W-kX3"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="5mj-23-PM0" id="dee-vb-5aR"/>
+                        <outlet property="imageView" destination="c6J-Cw-fkg" id="j7Z-Uo-oSj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImI-2q-arO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dQj-rU-9P5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1789.8550724637682" y="-119.19642857142857"/>
         </scene>
@@ -148,6 +167,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coachella-e1524620568456" width="1500" height="1030"/>
+        <image name="ccc" width="1500" height="1030"/>
     </resources>
 </document>
